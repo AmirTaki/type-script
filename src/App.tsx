@@ -1,6 +1,19 @@
 import React from 'react';
 
 
+// تعریف تایپ با کلمه کلیدی
+// type (name) = {type}
+
+type User =  {name : string ; age : number; color : string}
+
+type  ArrayType  = number[] 
+
+type ArrayMerge = (string | number | boolean) []
+
+// میتوان از دستور اکسپرت و اینپورت نیز استفاده کرد
+
+export type ArrayD = number [];
+
 function App() {
 
   // type string
@@ -57,11 +70,29 @@ let obj_user2 : {name : string ; age : number ; color : string} = {
   color : "white"
 }
 
+// ------------------------------------------------------------------------
 
+let profile : User =  {
+
+  name : "amir",
+  age : 30,
+  color : "black"
+
+}
+
+
+let array5 : ArrayType = [1, 2, 3, 4, 5, 6]
+
+let array6 : ArrayMerge = ["code2", "javaScript", "react", false , 1, 2, 3, 4, 5]
 
 return (
     <div className="App">
       <h1>type script</h1>
+      <p>
+         type string : {name}<br />
+         type number : {counter} <br />
+         
+      </p>
     </div>
   );
 }

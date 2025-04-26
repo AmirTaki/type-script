@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {ArrayD} from "./App"
+
+
+let array:ArrayD = [1, 3, 4]
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -10,6 +14,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <App />
+    <p>
+    type array : number {array}
+    </p>
+    
   </React.StrictMode>
 );
 
