@@ -11,10 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <App />
-    <p>
-\
-    </p>
-    
+
   </React.StrictMode>
 );
 

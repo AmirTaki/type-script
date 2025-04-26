@@ -1,12 +1,7 @@
 import React from 'react';
+import User from "./component/User"
 
 
-
-// function : 
-
-function sum (a:number, b:number) : number{
-  return  a + b ;
-}
 
 
 function App() {
@@ -14,9 +9,7 @@ function App() {
   return (
       <div className="App">
         <h1>type script</h1>
-        <p>
-        <h2>{sum (3, 8)}</h2>
-        </p>
+        <User name = "amir" age = {28} hasChild = {false}  />
       </div>
     );
   }
