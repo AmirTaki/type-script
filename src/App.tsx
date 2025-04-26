@@ -1,24 +1,56 @@
 import React from 'react';
-import { useState } from 'react';
-import User from './component/User';
 
+// TYPE extand
+
+type TUser1 = {
+  name : string,
+  age : number
+}
+
+
+type TUser2 = TUser1 & {
+    children : string []
+}
+
+let user : TUser2 = {
+  name : "amir",
+  age : 28,
+  children : ["not"]
+} 
+
+
+
+// INTERFACE extand
+
+
+interface IUser1 {
+  name : string ;
+  age  : number
+}
+
+interface IUser2 extends IUser1{
+  children : string[]
+}
+
+
+let UserI :  IUser2  = {
+  name : "amir",
+  age : 28,
+  children : ["not"]
+}
 
 function App() {
 
-  const[state, setState] = useState<string>("amir")
-
-  // const[state, setState] = useState<string|null>(null)
 
 
   return (
       <div className="App">
         <h1>type script</h1>
-          
-          <User value = {state} onChange = {setState} />
-       
+               
       </div>
     );
   }
 
 export default App;
 
+// ادغام کردن 
