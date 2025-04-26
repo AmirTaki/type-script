@@ -11,11 +11,10 @@ function App() {
   return (
       <div className="App">
         <h1>type script</h1>
-        <User name = "amir" age = {28} hasChild = {false} sum = {sum}  />
+        <User name = "amir" age = {28} hasChild = {false} sum = {sum}  father="mani"/>
+        <hr />
+        <User name = "mani" age = {23} hasChild = {true} sum = {sum}  />
 
-        <br />
-
-        <User2 name = "mani" age = {20}  hasChild = {true} sum = {sum}/>
       </div>
     );
   }
