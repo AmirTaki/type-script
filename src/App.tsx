@@ -11,9 +11,9 @@ function App() {
   return (
       <div className="App">
         <h1>type script</h1>
-        <User name = "amir" age = {28} hasChild = {false} sum = {sum}  father="mani"/>
+        <User name = "amir" age = {28} hasChild = {false} sum = {sum}  father="mani" mother = {true}/>
         <hr />
-        <User name = "mani" age = {23} hasChild = {true} sum = {sum}  />
+        <User name = "mani" age = {23} hasChild = {true} sum = {sum}  mother={"mari"} />
 
       </div>
     );
