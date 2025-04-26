@@ -11,18 +11,16 @@ type USER = {
     sum: (a : number , b:number)=> number 
 } 
 
-function User ({name, age , hasChild, sum}:USER) {
-    return(
-    <>
-        <h2> name :{name}</h2>
-      
-        <h2>age :{age}</h2>
-      
-        <h2>hasChild : {`${hasChild}`}</h2>
-      
-        <h2>sum : {sum(2, 6)}</h2>
-    </>    
+
+const User:React.FC<USER>  = ({name, age , hasChild, sum}) => {
+    return (
+        <>
+            <h2>name : {name}</h2>
+            <h2>age : {age}</h2>
+            <h2>hasChild : {hasChild}</h2>
+            <h2>sum : {sum(4, 6)}</h2>
+        </>
     )
-}
+}  
 
 export default User;
