@@ -1,17 +1,33 @@
 import React from 'react';
-import Button from "./component/Button"
+
+
+
 function App() {
 
+  const handleClick = (event :React.MouseEvent<HTMLButtonElement> ) =>{
+    event.target
+  }
 
+  const handleChange = (e : React.ChangeEvent<HTMLInputElement>) => {
+    e.target.value
+  }
 
   return (
       <div className="App">
         <h1>type script</h1>
-        <Button buttonTitle='test' />
-               
+
+        <button onClick={handleClick}> Click </button> 
+
+        <input type="text" onChange={handleChange}/>
+
+
       </div>
     );
   }
 
 export default App;
 
+
+{/* <input type="text" onChange={(e)=>{
+
+}} /> */}
