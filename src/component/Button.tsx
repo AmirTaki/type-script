@@ -1,16 +1,12 @@
-import React, { ComponentProps } from "react";
+import React, { ComponentProps, ComponentPropsWithoutRef, ComponentPropsWithRef } from "react";
  
-// type TButton = {
-//     type? : string, 
-//     value? : string ,
-//     onClick? : () => void;
-// }
 
-type TButton = ComponentProps<"button"> & {
+
+type TButton = ComponentPropsWithRef <"button"> & {
     buttonTitle? : string
 }
 
-function Button ({ type, onChange, onClick, buttonTitle} : TButton) {
+function Button ({ type, onChange, onClick, buttonTitle, ref} : TButton) {
     return(
         <>
             <button type = {type}>
@@ -23,6 +19,19 @@ function Button ({ type, onChange, onClick, buttonTitle} : TButton) {
 export default Button; 
 
 
-// نکته کاهی میخواهیم تایپ اضافه بگداریم از 
-// & 
-// استفاده میکنیم
+
+// اکر  میخواهیم از
+// ref
+// استفاده کنیم و 
+// ref
+// پاس دهیم به کامپوننت از دستور زیر استفاده میکنیم
+
+// ComponentPropsWithRef
+
+// ComponentProps
+
+// و اما اکر نخواهیم از 
+// ref 
+// استفاده نکنیم از دستور زیر استفاده میکنیم
+
+// ComponentPropsWithoutRef
