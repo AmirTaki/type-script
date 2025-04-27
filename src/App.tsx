@@ -1,16 +1,22 @@
-import React, { useRef } from 'react';
+import React, { useEffect } from 'react';
 
-type User1 = {
-  name : string,
-  age : number,
-  color : string
-}
 
-type user2 = Omit<User1, "age" | "color">
-  
-
+type TUser =  string; 
 
 function App() {
+
+  useEffect (()=>{
+
+    // const user = localStorage.getItem("user")
+
+    const user = JSON.parse(localStorage.getItem("user") as TUser );
+
+    console.log(typeof user)
+
+    console.log(user)
+  
+  })
+
 
 
   return (
@@ -23,3 +29,26 @@ function App() {
 
 export default App;
 
+
+// نکته هر جا که متغییر را ما دو حالتی باشد یا 
+
+// null
+
+// باشد یا
+
+// undifind
+
+// باشد میتوان از 
+
+// as 
+
+// استفاده کرد
+
+
+// یا بخواهیم استرینک به عنوان یه نامبر جا بزنیم یا بالعکس
+
+// یا از 
+
+// parseInt
+
+// toString
