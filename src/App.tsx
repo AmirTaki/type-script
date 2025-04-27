@@ -1,25 +1,21 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 
 
 function App() {
 
-  const handleClick = (event :React.MouseEvent<HTMLButtonElement> ) =>{
-    event.target
-  }
+  
+  const ref = useRef<HTMLButtonElement>(null)
 
-  const handleChange = (e : React.ChangeEvent<HTMLInputElement>) => {
-    e.target.value
-  }
+  const inputRef = useRef<HTMLInputElement>(null)
 
   return (
       <div className="App">
         <h1>type script</h1>
 
-        <button onClick={handleClick}> Click </button> 
+        <button ref = {ref}> Click </button> 
 
-        <input type="text" onChange={handleChange}/>
-
+        <input type="text" ref = {inputRef} />
 
       </div>
     );
@@ -27,7 +23,3 @@ function App() {
 
 export default App;
 
-
-{/* <input type="text" onChange={(e)=>{
-
-}} /> */}
